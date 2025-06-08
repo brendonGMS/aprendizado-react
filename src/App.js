@@ -1,26 +1,26 @@
 import './App.css';
 import HelloWorld from './components/HelloWorld'
+import SayMyName from './components/SayMyName'
+import Pessoa from './components/Pessoa'
+import Frase from './components/Frase'
 
 function App() {
-  const name = "Brendon"
-  const newName = name.toUpperCase()
-
-  function sum(a, b){
-    return a + b
-  }
-
-  const url = 'https://via.placeholder.com/150'
-
+  const nome  = "Juliana"
   return (
-    <div className="App">
-      <h1>Meu primeiro app</h1>
-      <p>Estarei Aprendendo a programar no REACT</p>
-      <p>Seja bem-vindo {newName}</p>
-      <p>Soma: {sum(5, 5)}</p>
-      <img scr={url} alt="Minha imagem"/>
+    <div className="App">  
+      <Frase/>
+      <Frase/>
       <HelloWorld/>
+      <SayMyName nome="Brendon"/>
+      <SayMyName nome="John"/>
+      <SayMyName nome={nome}/>
+      <Pessoa 
+        nome="Gregorie" 
+        idade="23" 
+        profissao="Analista" 
+      />
     </div>
-  );
-}
+   )
+  }
 
 export default App;
